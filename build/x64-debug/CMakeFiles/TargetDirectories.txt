@@ -1,0 +1,8 @@
+C:/dev/Hazel/build/x64-debug/CMakeFiles/edit_cache.dir
+C:/dev/Hazel/build/x64-debug/CMakeFiles/rebuild_cache.dir
+C:/dev/Hazel/build/x64-debug/Hazel/CMakeFiles/Hazel.dir
+C:/dev/Hazel/build/x64-debug/Hazel/CMakeFiles/edit_cache.dir
+C:/dev/Hazel/build/x64-debug/Hazel/CMakeFiles/rebuild_cache.dir
+C:/dev/Hazel/build/x64-debug/Sandbox/CMakeFiles/Sandbox.dir
+C:/dev/Hazel/build/x64-debug/Sandbox/CMakeFiles/edit_cache.dir
+C:/dev/Hazel/build/x64-debug/Sandbox/CMakeFiles/rebuild_cache.dir
