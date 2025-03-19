@@ -8,3 +8,4 @@ add_library(Hazel SHARED
 
 target_compile_definitions(Hazel PRIVATE HZ_PLATFORM_WINDOWS)
 target_compile_definitions(Hazel PRIVATE HZ_BUILD_DLL)
+target_include_directories(Sandbox PUBLIC ${CMAKE_SOURCE_DIR}/Hazel/vendor/spdlog/include)

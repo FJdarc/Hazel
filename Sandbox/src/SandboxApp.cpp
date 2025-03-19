@@ -1,4 +1,3 @@
-#include "Hazel/Application.h"
 #include <Hazel.h>
 
 class Sandbox : public Hazel::Application {
