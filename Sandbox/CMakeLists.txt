@@ -1,5 +1,6 @@
 add_executable(Sandbox
-    src/Application.cpp
+    src/SandboxApp.cpp
 )
 
 target_link_libraries(Sandbox PRIVATE Hazel)
+target_compile_definitions(Sandbox PRIVATE HZ_PLATFORM_WINDOWS)

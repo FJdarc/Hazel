@@ -4,18 +4,24 @@
             "type": "command",
             "name": "Config",
             "program": "cmake",
-            "args": ["-B", "$PROJECT_DIR$/build/x64-debug", "-S", ".", "-G", "MinGW Makefiles", "-DCMAKE_BUILD_TYPE=Debug", "-DCMAKE_C_FLAGS=-m64", "-DCMAKE_CXX_FLAGS=-m64", "-DEXECUTABLE_OUTPUT_PATH=$PROJECT_DIR$/build/x64-debug/bin", "-DLIBRARY_OUTPUT_PATH=$PROJECT_DIR$/build/x64-debug/libs", "-DBUILD_SHARED_LIBS=OFF", "-DBUILD_STATIC_LIBS=ON", "-DCMAKE_C_COMPILER=x86_64-w64-mingw32-gcc.exe", "-DCMAKE_CXX_COMPILER=x86_64-w64-mingw32-g++.exe"]
+            "args": ["-B", "$PROJECT_DIR$/cmake-build-debug", "-S", ".", "-G", "MinGW Makefiles", "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON", "-DCMAKE_BUILD_TYPE=Debug", "-DCMAKE_C_FLAGS=-m64", "-DCMAKE_CXX_FLAGS=-m64", "-DEXECUTABLE_OUTPUT_PATH=$PROJECT_DIR$/cmake-build-debug/bin", "-DLIBRARY_OUTPUT_PATH=$PROJECT_DIR$/cmake-build-debug/bin", "-DCMAKE_C_COMPILER=x86_64-w64-mingw32-gcc.exe", "-DCMAKE_CXX_COMPILER=x86_64-w64-mingw32-g++.exe"]
         },
         {
             "type": "command",
             "name": "Build",
             "program": "cmake",
-            "args": ["--build", "$PROJECT_DIR$/build/x64-debug"],
+            "args": ["--build", "$PROJECT_DIR$/cmake-build-debug"],
         },
         {
             "type": "command",
             "name": "Run",
-            "program": "$PROJECT_DIR$/build/x64-debug/bin/Sandbox",
+            "program": "$PROJECT_DIR$/cmake-build-debug/bin/Sandbox",
+        },
+        {
+            "type": "command",
+            "name": "Debug",
+            "program": "",
+            "dependsOn": ["Config", "Build", "Run"],
         },
     ]
 }
