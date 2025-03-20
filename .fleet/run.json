@@ -4,24 +4,50 @@
             "type": "command",
             "name": "Config",
             "program": "cmake",
-            "args": ["-B", "$PROJECT_DIR$/build/debug-x64", "-S", ".", "-G", "MinGW Makefiles", "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON", "-DCMAKE_BUILD_TYPE=Debug", "-DCMAKE_C_FLAGS=-m64", "-DCMAKE_CXX_FLAGS=-m64", "-DEXECUTABLE_OUTPUT_PATH=$PROJECT_DIR$/build/debug-x64/bin", "-DLIBRARY_OUTPUT_PATH=$PROJECT_DIR$/build/debug-x64/bin", "-DCMAKE_C_COMPILER=x86_64-w64-mingw32-gcc.exe", "-DCMAKE_CXX_COMPILER=x86_64-w64-mingw32-g++.exe"]
+            "args": [
+                "-B",
+                "$PROJECT_DIR$/build/debug-x64",
+                "-S",
+                ".",
+                "-G",
+                "MinGW Makefiles",
+                "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+                "-DCMAKE_BUILD_TYPE=Debug",
+                "-DCMAKE_C_FLAGS=-m64",
+                "-DCMAKE_CXX_FLAGS=-m64",
+                "-DEXECUTABLE_OUTPUT_PATH=$PROJECT_DIR$/build/debug-x64/bin",
+                "-DLIBRARY_OUTPUT_PATH=$PROJECT_DIR$/build/debug-x64/bin",
+                "-DCMAKE_C_COMPILER=x86_64-w64-mingw32-gcc.exe",
+                "-DCMAKE_CXX_COMPILER=x86_64-w64-mingw32-g++.exe"
+            ]
         },
         {
             "type": "command",
             "name": "Build",
             "program": "cmake",
-            "args": ["--build", "$PROJECT_DIR$/build/debug-x64"],
+            "args": [
+                "--build",
+                "$PROJECT_DIR$/build/debug-x64"
+            ],
+            "dependsOn": [
+                "Config"
+            ]
         },
         {
             "type": "command",
             "name": "Run",
             "program": "$PROJECT_DIR$/build/debug-x64/bin/Sandbox",
+            "dependsOn": [
+                "Build"
+            ]
         },
         {
             "type": "command",
             "name": "Debug-x64",
             "program": "",
-            "dependsOn": ["Config", "Build", "Run"],
-        },
+            "dependsOn": [
+                "Run"
+            ]
+        }
     ]
 }

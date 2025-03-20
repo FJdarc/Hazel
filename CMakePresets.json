@@ -1,0 +1,28 @@
+{
+    "version": 3,
+    "configurePresets": [
+      {
+        "name": "debug-x64",
+        "displayName": "x64 Debug",
+        "binaryDir": "${sourceDir}/build/debug-x64",
+        "generator": "MinGW Makefiles",
+        "cacheVariables": {
+          "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+          "CMAKE_BUILD_TYPE": "Debug",
+          "CMAKE_C_FLAGS": "-m64",
+          "CMAKE_CXX_FLAGS": "-m64",
+          "EXECUTABLE_OUTPUT_PATH": "${sourceDir}/build/debug-x64/bin",
+          "LIBRARY_OUTPUT_PATH": "${sourceDir}/build/debug-x64/bin",
+          "CMAKE_C_COMPILER": "x86_64-w64-mingw32-gcc.exe",
+          "CMAKE_CXX_COMPILER": "x86_64-w64-mingw32-g++.exe"
+        }
+      }
+    ],
+    "buildPresets": [
+      {
+        "name": "debug-x64-build",
+        "configurePreset": "debug-x64",
+        "displayName": "Build x64 Debug"
+      }
+    ]
+  }

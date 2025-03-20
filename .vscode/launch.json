@@ -1,0 +1,19 @@
+{
+    "version": "0.1.0",
+    "configurations": [
+      {
+        "name": "Debug x64",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/build/debug-x64/bin/Sandbox",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "miDebuggerPath": "C:/Program Files/mingw64/bin/gdb.exe",
+        "preLaunchTask": "Debug-x64"
+      }
+    ]
+  }
