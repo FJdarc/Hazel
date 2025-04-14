@@ -6,7 +6,7 @@
             "program": "cmake",
             "args": [
                 "-B",
-                "$PROJECT_DIR$/build/debug-x64",
+                "$PROJECT_DIR$/build/Debug-x64",
                 "-S",
                 ".",
                 "-G",
@@ -15,10 +15,10 @@
                 "-DCMAKE_BUILD_TYPE=Debug",
                 "-DCMAKE_C_FLAGS=-m64",
                 "-DCMAKE_CXX_FLAGS=-m64",
-                "-DEXECUTABLE_OUTPUT_PATH=$PROJECT_DIR$/build/debug-x64/bin",
-                "-DLIBRARY_OUTPUT_PATH=$PROJECT_DIR$/build/debug-x64/bin",
-                "-DCMAKE_C_COMPILER=x86_64-w64-mingw32-gcc.exe",
-                "-DCMAKE_CXX_COMPILER=x86_64-w64-mingw32-g++.exe"
+                "-DEXECUTABLE_OUTPUT_PATH=$PROJECT_DIR$/build/Debug-x64/bin",
+                "-DLIBRARY_OUTPUT_PATH=$PROJECT_DIR$/build/Debug-x64/bin",
+                "-DCMAKE_C_COMPILER=x86_64-w64-mingw32-gcc",
+                "-DCMAKE_CXX_COMPILER=x86_64-w64-mingw32-g++"
             ]
         },
         {
@@ -27,7 +27,7 @@
             "program": "cmake",
             "args": [
                 "--build",
-                "$PROJECT_DIR$/build/debug-x64"
+                "$PROJECT_DIR$/build/Debug-x64"
             ],
             "dependsOn": [
                 "Config"
@@ -36,7 +36,7 @@
         {
             "type": "command",
             "name": "Run",
-            "program": "$PROJECT_DIR$/build/debug-x64/bin/Sandbox",
+            "program": "$PROJECT_DIR$/build/Debug-x64/bin/Sandbox",
             "dependsOn": [
                 "Build"
             ]

@@ -6,17 +6,17 @@
         "type": "shell",
         "command": "cmake",
         "args": [
-          "-B", "${workspaceFolder}/build/debug-x64",
+          "-B", "${workspaceFolder}/build/Debug-x64",
           "-S", ".",
           "-G", "MinGW Makefiles",
           "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
           "-DCMAKE_BUILD_TYPE=Debug",
           "-DCMAKE_C_FLAGS=-m64",
           "-DCMAKE_CXX_FLAGS=-m64",
-          "-DEXECUTABLE_OUTPUT_PATH=${workspaceFolder}/build/debug-x64/bin",
-          "-DLIBRARY_OUTPUT_PATH=${workspaceFolder}/build/debug-x64/bin",
-          "-DCMAKE_C_COMPILER=x86_64-w64-mingw32-gcc.exe",
-          "-DCMAKE_CXX_COMPILER=x86_64-w64-mingw32-g++.exe"
+          "-DEXECUTABLE_OUTPUT_PATH=${workspaceFolder}/build/Debug-x64/bin",
+          "-DLIBRARY_OUTPUT_PATH=${workspaceFolder}/build/Debug-x64/bin",
+          "-DCMAKE_C_COMPILER=x86_64-w64-mingw32-gcc",
+          "-DCMAKE_CXX_COMPILER=x86_64-w64-mingw32-g++"
         ],
         "options": { "cwd": "${workspaceFolder}" }
       },
@@ -24,14 +24,14 @@
         "label": "Build",
         "type": "shell",
         "command": "cmake",
-        "args": ["--build", "${workspaceFolder}/build/debug-x64"],
+        "args": ["--build", "${workspaceFolder}/build/Debug-x64"],
         "dependsOn": ["Config"],
         "options": { "cwd": "${workspaceFolder}" }
       },
       {
         "label": "Run",
         "type": "shell",
-        "command": "${workspaceFolder}/build/debug-x64/bin/Sandbox",
+        "command": "${workspaceFolder}/build/Debug-x64/bin/Sandbox",
         "dependsOn": ["Build"],
         "options": { "cwd": "${workspaceFolder}" }
       },
