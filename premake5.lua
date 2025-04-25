@@ -26,6 +26,7 @@ project "Hazel"
     
     includedirs
     {
+        "Hazel/vendor/spdlog/include"
     }
     
     filter "system:windows"
@@ -38,17 +39,6 @@ project "Hazel"
     	{
     	    "HZ_PLATFORM_WINDOWS",
     	    "HZ_BUILD_DLL"
-    	}
-    
-    filter "system:unix"
-    	cppdialect "C++17"
-    	staticruntime "On"
-    	systemversion "latest"
-    	
-    	defines
-    	{
-    	    "HZ_PLATFORM_UNIX",
-    	    "HZ_BUILD_SO"
     	}
 
     filter "configurations:Debug"
@@ -80,6 +70,7 @@ project "Sandbox"
     
     includedirs
     {
+        "Hazel/vendor/spdlog/include",
     	"Hazel/src"
     }
     
@@ -98,15 +89,7 @@ project "Sandbox"
     	{
     	    "HZ_PLATFORM_WINDOWS"
     	}
-    filter "system:unix"
-    	cppdialect "C++17"
-    	staticruntime "On"
-    	systemversion "latest"
-    	
-    	defines
-    	{
-    	    "HZ_PLATFORM_UNIX"
-    	}
+
     filter "configurations:Debug"
         defines "HZ_DEBUG"
         symbols "On"
