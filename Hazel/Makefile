@@ -28,7 +28,7 @@ ifeq ($(origin AR), default)
   AR = x86_64-w64-mingw32-ar
 endif
 RESCOMP = x86_64-w64-mingw32-windres
-INCLUDES += -Ivendor/spdlog/include
+INCLUDES += -Isrc -Ivendor/spdlog/include
 FORCE_INCLUDE +=
 ALL_CPPFLAGS += $(CPPFLAGS) -MD -MP $(DEFINES) $(INCLUDES)
 ALL_RESFLAGS += $(RESFLAGS) $(DEFINES) $(INCLUDES)
