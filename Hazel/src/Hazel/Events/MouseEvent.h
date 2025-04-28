@@ -1,9 +1,9 @@
 #pragma once
 
 #include "Event.h"
-#include <sstream>
 
-namespace Hazel {
+namespace Hazel
+{
     class HAZEL_API MouseMovedEvent : public Event
     {
     public:
@@ -58,7 +58,7 @@ namespace Hazel {
     };
 
     class HAZEL_API MouseButtonPressedEvent : public MouseButtonEvent
-    {  
+    {
     public:
         MouseButtonPressedEvent(int button)
             : MouseButtonEvent(button) {}

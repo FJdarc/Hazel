@@ -2,9 +2,8 @@
 
 #include "Event.h"
 
-#include <sstream>
-
-namespace Hazel {
+namespace Hazel
+{
     class HAZEL_API KeyEvent : public Event
     {
     public:

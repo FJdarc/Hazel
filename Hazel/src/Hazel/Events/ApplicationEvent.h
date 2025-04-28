@@ -2,9 +2,8 @@
 
 #include "Event.h"
 
-#include <sstream>
-
-namespace Hazel {
+namespace Hazel
+{
     class HAZEL_API WindowsResizeEvent : public Event
     {
     public:
@@ -12,7 +11,7 @@ namespace Hazel {
             : m_Width(width), m_Height(height) {}
         inline unsigned int GetWidth() const { return m_Width; }
         inline unsigned int GetHeight() const { return m_Height; }
-    
+
         std::string ToString() const override
         {
             std::stringstream ss;
@@ -61,4 +60,3 @@ namespace Hazel {
         EVENT_CLASS_CATEGORY(EventCategoryApplication)
     };
 }
-
