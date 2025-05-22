@@ -19,24 +19,22 @@ endif
 # #############################################
 
 ifeq ($(origin CC), default)
-  CC = x86_64-w64-mingw32-gcc
+  CC = gcc
 endif
 ifeq ($(origin CXX), default)
-  CXX = x86_64-w64-mingw32-g++
+  CXX = g++
 endif
 ifeq ($(origin AR), default)
-  AR = x86_64-w64-mingw32-ar
+  AR = ar
 endif
-RESCOMP = x86_64-w64-mingw32-windres
+RESCOMP = windres
 PCH = src/hzpch.h
 PCH_PLACEHOLDER = $(OBJDIR)/$(notdir $(PCH))
 GCH = $(PCH_PLACEHOLDER).gch
-INCLUDES += -Isrc -Ivendor/spdlog/include
+INCLUDES += -Isrc -Ivendor/spdlog/include -Ivendor/GLFW/include
 FORCE_INCLUDE +=
 ALL_CPPFLAGS += $(CPPFLAGS) -MD -MP $(DEFINES) $(INCLUDES)
 ALL_RESFLAGS += $(RESFLAGS) $(DEFINES) $(INCLUDES)
-LIBS +=
-LDDEPS +=
 LINKCMD = $(CXX) -o "$@" $(OBJECTS) $(RESOURCES) $(ALL_LDFLAGS) $(LIBS)
 define PREBUILDCMDS
 endef
@@ -52,6 +50,8 @@ OBJDIR = ../build/Debug-windows-x86_64/obj/Hazel
 DEFINES += -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DHZ_DEBUG
 ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -g
 ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -g -std=c++17
+LIBS += vendor/GLFW/build/Debug-windows-x86_64/bin/GLFW.lib -lopengl32 -lgdi32
+LDDEPS += vendor/GLFW/build/Debug-windows-x86_64/bin/GLFW.lib
 ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64 -shared -Wl,--out-implib="../build/Debug-windows-x86_64/bin/Hazel.lib"
 
 else ifeq ($(config),release)
@@ -61,6 +61,8 @@ OBJDIR = ../build/Release-windows-x86_64/obj/Hazel
 DEFINES += -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DHZ_RELEASE
 ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -O2
 ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -O2 -std=c++17
+LIBS += vendor/GLFW/build/Release-windows-x86_64/bin/GLFW.lib -lopengl32 -lgdi32
+LDDEPS += vendor/GLFW/build/Release-windows-x86_64/bin/GLFW.lib
 ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64 -shared -Wl,--out-implib="../build/Release-windows-x86_64/bin/Hazel.lib" -s
 
 else ifeq ($(config),dist)
@@ -70,6 +72,8 @@ OBJDIR = ../build/Dist-windows-x86_64/obj/Hazel
 DEFINES += -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DHZ_DIST
 ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -O2
 ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -O2 -std=c++17
+LIBS += vendor/GLFW/build/Dist-windows-x86_64/bin/GLFW.lib -lopengl32 -lgdi32
+LDDEPS += vendor/GLFW/build/Dist-windows-x86_64/bin/GLFW.lib
 ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64 -shared -Wl,--out-implib="../build/Dist-windows-x86_64/bin/Hazel.lib" -s
 
 endif
@@ -86,9 +90,11 @@ OBJECTS :=
 
 GENERATED += $(OBJDIR)/Application.o
 GENERATED += $(OBJDIR)/Log.o
+GENERATED += $(OBJDIR)/WindowsWindow.o
 GENERATED += $(OBJDIR)/hzpch.o
 OBJECTS += $(OBJDIR)/Application.o
 OBJECTS += $(OBJDIR)/Log.o
+OBJECTS += $(OBJDIR)/WindowsWindow.o
 OBJECTS += $(OBJDIR)/hzpch.o
 
 # Rules
@@ -157,6 +163,9 @@ $(OBJDIR)/Application.o: src/Hazel/Application.cpp
 	@echo "$(notdir $<)"
 	$(SILENT) $(CXX) -include $(PCH_PLACEHOLDER) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/Log.o: src/Hazel/Log.cpp
+	@echo "$(notdir $<)"
+	$(SILENT) $(CXX) -include $(PCH_PLACEHOLDER) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
+$(OBJDIR)/WindowsWindow.o: src/Platform/Windows/WindowsWindow.cpp
 	@echo "$(notdir $<)"
 	$(SILENT) $(CXX) -include $(PCH_PLACEHOLDER) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/hzpch.o: src/hzpch.cpp

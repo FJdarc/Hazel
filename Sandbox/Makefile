@@ -19,16 +19,16 @@ endif
 # #############################################
 
 ifeq ($(origin CC), default)
-  CC = x86_64-w64-mingw32-gcc
+  CC = gcc
 endif
 ifeq ($(origin CXX), default)
-  CXX = x86_64-w64-mingw32-g++
+  CXX = g++
 endif
 ifeq ($(origin AR), default)
-  AR = x86_64-w64-mingw32-ar
+  AR = ar
 endif
-RESCOMP = x86_64-w64-mingw32-windres
-INCLUDES += -I../Hazel/vendor/spdlog/include -I../Hazel/src
+RESCOMP = windres
+INCLUDES += -I../Hazel/src -I../Hazel/vendor/spdlog/include
 FORCE_INCLUDE +=
 ALL_CPPFLAGS += $(CPPFLAGS) -MD -MP $(DEFINES) $(INCLUDES)
 ALL_RESFLAGS += $(RESFLAGS) $(DEFINES) $(INCLUDES)
