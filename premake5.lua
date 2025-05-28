@@ -7,7 +7,7 @@ workspace "Hazel"
         "Release",
         "Dist"
     }
-    toolset "gcc"
+    toolset "clang"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
