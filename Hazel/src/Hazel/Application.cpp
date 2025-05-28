@@ -1,6 +1,5 @@
-#include "Application.h"
-
-#include "Log.h"
+#include "Hazel/Application.h"
+#include "Hazel/Log.h"
 #include <GLFW/glfw3.h>
 
 namespace Hazel
@@ -19,7 +18,7 @@ namespace Hazel
     void Application::OnEvent(Event &e)
     {
         EventDispatcher dispatcher(e);
-        dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
+        dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(Application::OnWindowClose));
         HZ_CORE_TRACE("{0}", e.ToString());
     }
 

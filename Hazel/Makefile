@@ -19,10 +19,10 @@ endif
 # #############################################
 
 ifeq ($(origin CC), default)
-  CC = gcc
+  CC = clang
 endif
 ifeq ($(origin CXX), default)
-  CXX = g++
+  CXX = clang++
 endif
 ifeq ($(origin AR), default)
   AR = ar
@@ -63,7 +63,7 @@ ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -O2
 ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -O2 -std=c++17
 LIBS += vendor/GLFW/build/Release-windows-x86_64/bin/GLFW.lib -lopengl32 -lgdi32
 LDDEPS += vendor/GLFW/build/Release-windows-x86_64/bin/GLFW.lib
-ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64 -shared -Wl,--out-implib="../build/Release-windows-x86_64/bin/Hazel.lib" -s
+ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64 -shared -Wl,--out-implib="../build/Release-windows-x86_64/bin/Hazel.lib"
 
 else ifeq ($(config),dist)
 TARGETDIR = ../build/Dist-windows-x86_64/bin
@@ -74,7 +74,7 @@ ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -O2
 ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -O2 -std=c++17
 LIBS += vendor/GLFW/build/Dist-windows-x86_64/bin/GLFW.lib -lopengl32 -lgdi32
 LDDEPS += vendor/GLFW/build/Dist-windows-x86_64/bin/GLFW.lib
-ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64 -shared -Wl,--out-implib="../build/Dist-windows-x86_64/bin/Hazel.lib" -s
+ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64 -shared -Wl,--out-implib="../build/Dist-windows-x86_64/bin/Hazel.lib"
 
 endif
 

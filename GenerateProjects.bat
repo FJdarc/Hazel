@@ -1,2 +1,2 @@
-call premake5.exe gmake
+call vendor\premake5.exe gmake
 PAUSE

@@ -19,10 +19,10 @@ endif
 # #############################################
 
 ifeq ($(origin CC), default)
-  CC = gcc
+  CC = clang
 endif
 ifeq ($(origin CXX), default)
-  CXX = g++
+  CXX = clang++
 endif
 ifeq ($(origin AR), default)
   AR = ar
@@ -32,6 +32,7 @@ INCLUDES += -I../Hazel/src -I../Hazel/vendor/spdlog/include
 FORCE_INCLUDE +=
 ALL_CPPFLAGS += $(CPPFLAGS) -MD -MP $(DEFINES) $(INCLUDES)
 ALL_RESFLAGS += $(RESFLAGS) $(DEFINES) $(INCLUDES)
+ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64
 LINKCMD = $(CXX) -o "$@" $(OBJECTS) $(RESOURCES) $(ALL_LDFLAGS) $(LIBS)
 define PREBUILDCMDS
 endef
@@ -49,7 +50,6 @@ ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -g
 ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -g -std=c++17
 LIBS += ../build/Debug-windows-x86_64/bin/Hazel.lib
 LDDEPS += ../build/Debug-windows-x86_64/bin/Hazel.lib
-ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64
 
 else ifeq ($(config),release)
 TARGETDIR = ../build/Release-windows-x86_64/bin
@@ -60,7 +60,6 @@ ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -O2
 ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -O2 -std=c++17
 LIBS += ../build/Release-windows-x86_64/bin/Hazel.lib
 LDDEPS += ../build/Release-windows-x86_64/bin/Hazel.lib
-ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64 -s
 
 else ifeq ($(config),dist)
 TARGETDIR = ../build/Dist-windows-x86_64/bin
@@ -71,7 +70,6 @@ ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -O2
 ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -O2 -std=c++17
 LIBS += ../build/Dist-windows-x86_64/bin/Hazel.lib
 LDDEPS += ../build/Dist-windows-x86_64/bin/Hazel.lib
-ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64 -s
 
 endif
 
