@@ -46,8 +46,8 @@ TARGETDIR = ../build/Debug-windows-x86_64/bin
 TARGET = $(TARGETDIR)/Sandbox.exe
 OBJDIR = ../build/Debug-windows-x86_64/obj/Sandbox
 DEFINES += -DHZ_PLATFORM_WINDOWS -DHZ_DEBUG
-ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -g
-ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -g -std=c++17
+ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -g -g
+ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -g -std=c++17 -g
 LIBS += ../build/Debug-windows-x86_64/bin/Hazel.lib
 LDDEPS += ../build/Debug-windows-x86_64/bin/Hazel.lib
 

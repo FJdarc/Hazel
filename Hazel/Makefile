@@ -31,7 +31,7 @@ RESCOMP = windres
 PCH = src/hzpch.h
 PCH_PLACEHOLDER = $(OBJDIR)/$(notdir $(PCH))
 GCH = $(PCH_PLACEHOLDER).gch
-INCLUDES += -Isrc -Ivendor/spdlog/include -Ivendor/GLFW/include
+INCLUDES += -Isrc -Ivendor/spdlog/include -Ivendor/GLFW/include -Ivendor/Glad/include
 FORCE_INCLUDE +=
 ALL_CPPFLAGS += $(CPPFLAGS) -MD -MP $(DEFINES) $(INCLUDES)
 ALL_RESFLAGS += $(RESFLAGS) $(DEFINES) $(INCLUDES)
@@ -47,33 +47,33 @@ ifeq ($(config),debug)
 TARGETDIR = ../build/Debug-windows-x86_64/bin
 TARGET = $(TARGETDIR)/Hazel.dll
 OBJDIR = ../build/Debug-windows-x86_64/obj/Hazel
-DEFINES += -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DHZ_DEBUG
-ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -g
-ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -g -std=c++17
-LIBS += vendor/GLFW/build/Debug-windows-x86_64/bin/GLFW.lib -lopengl32 -lgdi32
-LDDEPS += vendor/GLFW/build/Debug-windows-x86_64/bin/GLFW.lib
+DEFINES += -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DGLFW_INCLUDE_NONE -DHZ_DEBUG
+ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -g -g
+ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -g -std=c++17 -g
+LIBS += vendor/GLFW/build/Debug-windows-x86_64/bin/GLFW.lib vendor/Glad/build/Debug-windows-x86_64/bin/Glad.lib -lopengl32 -lgdi32
+LDDEPS += vendor/GLFW/build/Debug-windows-x86_64/bin/GLFW.lib vendor/Glad/build/Debug-windows-x86_64/bin/Glad.lib
 ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64 -shared -Wl,--out-implib="../build/Debug-windows-x86_64/bin/Hazel.lib"
 
 else ifeq ($(config),release)
 TARGETDIR = ../build/Release-windows-x86_64/bin
 TARGET = $(TARGETDIR)/Hazel.dll
 OBJDIR = ../build/Release-windows-x86_64/obj/Hazel
-DEFINES += -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DHZ_RELEASE
+DEFINES += -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DGLFW_INCLUDE_NONE -DHZ_RELEASE
 ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -O2
 ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -O2 -std=c++17
-LIBS += vendor/GLFW/build/Release-windows-x86_64/bin/GLFW.lib -lopengl32 -lgdi32
-LDDEPS += vendor/GLFW/build/Release-windows-x86_64/bin/GLFW.lib
+LIBS += vendor/GLFW/build/Release-windows-x86_64/bin/GLFW.lib vendor/Glad/build/Release-windows-x86_64/bin/Glad.lib -lopengl32 -lgdi32
+LDDEPS += vendor/GLFW/build/Release-windows-x86_64/bin/GLFW.lib vendor/Glad/build/Release-windows-x86_64/bin/Glad.lib
 ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64 -shared -Wl,--out-implib="../build/Release-windows-x86_64/bin/Hazel.lib"
 
 else ifeq ($(config),dist)
 TARGETDIR = ../build/Dist-windows-x86_64/bin
 TARGET = $(TARGETDIR)/Hazel.dll
 OBJDIR = ../build/Dist-windows-x86_64/obj/Hazel
-DEFINES += -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DHZ_DIST
+DEFINES += -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DGLFW_INCLUDE_NONE -DHZ_DIST
 ALL_CFLAGS += $(CFLAGS) $(ALL_CPPFLAGS) -m64 -O2
 ALL_CXXFLAGS += $(CXXFLAGS) $(ALL_CPPFLAGS) -m64 -O2 -std=c++17
-LIBS += vendor/GLFW/build/Dist-windows-x86_64/bin/GLFW.lib -lopengl32 -lgdi32
-LDDEPS += vendor/GLFW/build/Dist-windows-x86_64/bin/GLFW.lib
+LIBS += vendor/GLFW/build/Dist-windows-x86_64/bin/GLFW.lib vendor/Glad/build/Dist-windows-x86_64/bin/Glad.lib -lopengl32 -lgdi32
+LDDEPS += vendor/GLFW/build/Dist-windows-x86_64/bin/GLFW.lib vendor/Glad/build/Dist-windows-x86_64/bin/Glad.lib
 ALL_LDFLAGS += $(LDFLAGS) -L/usr/lib64 -m64 -shared -Wl,--out-implib="../build/Dist-windows-x86_64/bin/Hazel.lib"
 
 endif
@@ -89,10 +89,14 @@ GENERATED :=
 OBJECTS :=
 
 GENERATED += $(OBJDIR)/Application.o
+GENERATED += $(OBJDIR)/Layer.o
+GENERATED += $(OBJDIR)/LayerStack.o
 GENERATED += $(OBJDIR)/Log.o
 GENERATED += $(OBJDIR)/WindowsWindow.o
 GENERATED += $(OBJDIR)/hzpch.o
 OBJECTS += $(OBJDIR)/Application.o
+OBJECTS += $(OBJDIR)/Layer.o
+OBJECTS += $(OBJDIR)/LayerStack.o
 OBJECTS += $(OBJDIR)/Log.o
 OBJECTS += $(OBJDIR)/WindowsWindow.o
 OBJECTS += $(OBJDIR)/hzpch.o
@@ -160,6 +164,12 @@ endif
 # #############################################
 
 $(OBJDIR)/Application.o: src/Hazel/Application.cpp
+	@echo "$(notdir $<)"
+	$(SILENT) $(CXX) -include $(PCH_PLACEHOLDER) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
+$(OBJDIR)/Layer.o: src/Hazel/Layer.cpp
+	@echo "$(notdir $<)"
+	$(SILENT) $(CXX) -include $(PCH_PLACEHOLDER) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
+$(OBJDIR)/LayerStack.o: src/Hazel/LayerStack.cpp
 	@echo "$(notdir $<)"
 	$(SILENT) $(CXX) -include $(PCH_PLACEHOLDER) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/Log.o: src/Hazel/Log.cpp

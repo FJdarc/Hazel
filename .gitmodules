@@ -4,3 +4,7 @@
 [submodule "Hazel/vendor/GLFW"]
 	path = Hazel/vendor/GLFW
 	url = https://github.com/FJdarc/glfw
+
+[submodule "vendor/export-compile-commands"]
+	path = vendor/export-compile-commands
+	url = https://github.com/FJdarc/premake-export-compile-commands

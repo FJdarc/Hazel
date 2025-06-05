@@ -10,16 +10,19 @@ endif
 
 ifeq ($(config),debug)
   GLFW_config = debug
+  Glad_config = debug
   Hazel_config = debug
   Sandbox_config = debug
 
 else ifeq ($(config),release)
   GLFW_config = release
+  Glad_config = release
   Hazel_config = release
   Sandbox_config = release
 
 else ifeq ($(config),dist)
   GLFW_config = dist
+  Glad_config = dist
   Hazel_config = dist
   Sandbox_config = dist
 
@@ -27,7 +30,7 @@ else
   $(error "invalid configuration $(config)")
 endif
 
-PROJECTS := GLFW Hazel Sandbox
+PROJECTS := GLFW Glad Hazel Sandbox
 
 .PHONY: all clean help $(PROJECTS) 
 
@@ -39,7 +42,13 @@ ifneq (,$(GLFW_config))
 	@${MAKE} --no-print-directory -C Hazel/vendor/GLFW -f Makefile config=$(GLFW_config)
 endif
 
-Hazel: GLFW
+Glad:
+ifneq (,$(Glad_config))
+	@echo "==== Building Glad ($(Glad_config)) ===="
+	@${MAKE} --no-print-directory -C Hazel/vendor/Glad -f Makefile config=$(Glad_config)
+endif
+
+Hazel: GLFW Glad
 ifneq (,$(Hazel_config))
 	@echo "==== Building Hazel ($(Hazel_config)) ===="
 	@${MAKE} --no-print-directory -C Hazel -f Makefile config=$(Hazel_config)
@@ -53,6 +62,7 @@ endif
 
 clean:
 	@${MAKE} --no-print-directory -C Hazel/vendor/GLFW -f Makefile clean
+	@${MAKE} --no-print-directory -C Hazel/vendor/Glad -f Makefile clean
 	@${MAKE} --no-print-directory -C Hazel -f Makefile clean
 	@${MAKE} --no-print-directory -C Sandbox -f Makefile clean
 
@@ -68,6 +78,7 @@ help:
 	@echo "   all (default)"
 	@echo "   clean"
 	@echo "   GLFW"
+	@echo "   Glad"
 	@echo "   Hazel"
 	@echo "   Sandbox"
 	@echo ""

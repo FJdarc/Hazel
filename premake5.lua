@@ -1,3 +1,7 @@
+package.path = package.path .. ";" .. path.getabsolute("vendor/premake-export-compile-commands/?.lua")
+
+require "export-compile-commands"
+
 workspace "Hazel"
     architecture "x64"
 
@@ -13,7 +17,9 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "Hazel/vendor/GLFW/include"
+IncludeDir["Glad"] = "Hazel/vendor/Glad/include"
 include "Hazel/vendor/GLFW"
+include "Hazel/vendor/Glad"
 
 project "Hazel"
     location "Hazel"
@@ -36,12 +42,14 @@ project "Hazel"
     {
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}"
     }
 
     links
     {
         "GLFW",
+        "Glad",
         "opengl32",
         "gdi32"
     }
@@ -54,13 +62,15 @@ project "Hazel"
     	defines
     	{
     	    "HZ_PLATFORM_WINDOWS",
-    	    "HZ_BUILD_DLL"
+    	    "HZ_BUILD_DLL",
+    	    "GLFW_INCLUDE_NONE"
     	}
 
     filter "configurations:Debug"
         defines "HZ_DEBUG"
+        buildoptions "-g"
         symbols "On"
-        
+
     filter "configurations:Release"
         defines "HZ_RELEASE"
         optimize "On"
@@ -106,12 +116,13 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "HZ_DEBUG"
+        buildoptions "-g"
         symbols "On"
-        
+
     filter "configurations:Release"
         defines "HZ_RELEASE"
         optimize "On"
-        
+
     filter "configurations:DIST"
         defines "HZ_DIST"
         optimize "On"
