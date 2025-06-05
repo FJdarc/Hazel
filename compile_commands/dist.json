@@ -1,0 +1,175 @@
+[
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/GLFW",
+            "file": "C:/dev/Hazel/Hazel/vendor/GLFW/src/context.c",
+            "command": "cc -MD -MP -D_GLFW_WIN32 -D_CRT_SECURE_NO_WARNINGS -m64 -std=c17 -o C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/context.o -MF C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/context.d -c C:/dev/Hazel/Hazel/vendor/GLFW/src/context.c"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/GLFW",
+            "file": "C:/dev/Hazel/Hazel/vendor/GLFW/src/egl_context.c",
+            "command": "cc -MD -MP -D_GLFW_WIN32 -D_CRT_SECURE_NO_WARNINGS -m64 -std=c17 -o C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/egl_context.o -MF C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/egl_context.d -c C:/dev/Hazel/Hazel/vendor/GLFW/src/egl_context.c"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/GLFW",
+            "file": "C:/dev/Hazel/Hazel/vendor/GLFW/src/init.c",
+            "command": "cc -MD -MP -D_GLFW_WIN32 -D_CRT_SECURE_NO_WARNINGS -m64 -std=c17 -o C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/init.o -MF C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/init.d -c C:/dev/Hazel/Hazel/vendor/GLFW/src/init.c"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/GLFW",
+            "file": "C:/dev/Hazel/Hazel/vendor/GLFW/src/input.c",
+            "command": "cc -MD -MP -D_GLFW_WIN32 -D_CRT_SECURE_NO_WARNINGS -m64 -std=c17 -o C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/input.o -MF C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/input.d -c C:/dev/Hazel/Hazel/vendor/GLFW/src/input.c"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/GLFW",
+            "file": "C:/dev/Hazel/Hazel/vendor/GLFW/src/monitor.c",
+            "command": "cc -MD -MP -D_GLFW_WIN32 -D_CRT_SECURE_NO_WARNINGS -m64 -std=c17 -o C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/monitor.o -MF C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/monitor.d -c C:/dev/Hazel/Hazel/vendor/GLFW/src/monitor.c"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/GLFW",
+            "file": "C:/dev/Hazel/Hazel/vendor/GLFW/src/null_init.c",
+            "command": "cc -MD -MP -D_GLFW_WIN32 -D_CRT_SECURE_NO_WARNINGS -m64 -std=c17 -o C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/null_init.o -MF C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/null_init.d -c C:/dev/Hazel/Hazel/vendor/GLFW/src/null_init.c"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/GLFW",
+            "file": "C:/dev/Hazel/Hazel/vendor/GLFW/src/null_joystick.c",
+            "command": "cc -MD -MP -D_GLFW_WIN32 -D_CRT_SECURE_NO_WARNINGS -m64 -std=c17 -o C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/null_joystick.o -MF C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/null_joystick.d -c C:/dev/Hazel/Hazel/vendor/GLFW/src/null_joystick.c"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/GLFW",
+            "file": "C:/dev/Hazel/Hazel/vendor/GLFW/src/null_monitor.c",
+            "command": "cc -MD -MP -D_GLFW_WIN32 -D_CRT_SECURE_NO_WARNINGS -m64 -std=c17 -o C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/null_monitor.o -MF C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/null_monitor.d -c C:/dev/Hazel/Hazel/vendor/GLFW/src/null_monitor.c"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/GLFW",
+            "file": "C:/dev/Hazel/Hazel/vendor/GLFW/src/null_window.c",
+            "command": "cc -MD -MP -D_GLFW_WIN32 -D_CRT_SECURE_NO_WARNINGS -m64 -std=c17 -o C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/null_window.o -MF C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/null_window.d -c C:/dev/Hazel/Hazel/vendor/GLFW/src/null_window.c"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/GLFW",
+            "file": "C:/dev/Hazel/Hazel/vendor/GLFW/src/osmesa_context.c",
+            "command": "cc -MD -MP -D_GLFW_WIN32 -D_CRT_SECURE_NO_WARNINGS -m64 -std=c17 -o C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/osmesa_context.o -MF C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/osmesa_context.d -c C:/dev/Hazel/Hazel/vendor/GLFW/src/osmesa_context.c"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/GLFW",
+            "file": "C:/dev/Hazel/Hazel/vendor/GLFW/src/platform.c",
+            "command": "cc -MD -MP -D_GLFW_WIN32 -D_CRT_SECURE_NO_WARNINGS -m64 -std=c17 -o C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/platform.o -MF C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/platform.d -c C:/dev/Hazel/Hazel/vendor/GLFW/src/platform.c"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/GLFW",
+            "file": "C:/dev/Hazel/Hazel/vendor/GLFW/src/vulkan.c",
+            "command": "cc -MD -MP -D_GLFW_WIN32 -D_CRT_SECURE_NO_WARNINGS -m64 -std=c17 -o C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/vulkan.o -MF C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/vulkan.d -c C:/dev/Hazel/Hazel/vendor/GLFW/src/vulkan.c"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/GLFW",
+            "file": "C:/dev/Hazel/Hazel/vendor/GLFW/src/wgl_context.c",
+            "command": "cc -MD -MP -D_GLFW_WIN32 -D_CRT_SECURE_NO_WARNINGS -m64 -std=c17 -o C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/wgl_context.o -MF C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/wgl_context.d -c C:/dev/Hazel/Hazel/vendor/GLFW/src/wgl_context.c"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/GLFW",
+            "file": "C:/dev/Hazel/Hazel/vendor/GLFW/src/win32_init.c",
+            "command": "cc -MD -MP -D_GLFW_WIN32 -D_CRT_SECURE_NO_WARNINGS -m64 -std=c17 -o C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/win32_init.o -MF C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/win32_init.d -c C:/dev/Hazel/Hazel/vendor/GLFW/src/win32_init.c"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/GLFW",
+            "file": "C:/dev/Hazel/Hazel/vendor/GLFW/src/win32_joystick.c",
+            "command": "cc -MD -MP -D_GLFW_WIN32 -D_CRT_SECURE_NO_WARNINGS -m64 -std=c17 -o C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/win32_joystick.o -MF C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/win32_joystick.d -c C:/dev/Hazel/Hazel/vendor/GLFW/src/win32_joystick.c"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/GLFW",
+            "file": "C:/dev/Hazel/Hazel/vendor/GLFW/src/win32_module.c",
+            "command": "cc -MD -MP -D_GLFW_WIN32 -D_CRT_SECURE_NO_WARNINGS -m64 -std=c17 -o C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/win32_module.o -MF C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/win32_module.d -c C:/dev/Hazel/Hazel/vendor/GLFW/src/win32_module.c"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/GLFW",
+            "file": "C:/dev/Hazel/Hazel/vendor/GLFW/src/win32_monitor.c",
+            "command": "cc -MD -MP -D_GLFW_WIN32 -D_CRT_SECURE_NO_WARNINGS -m64 -std=c17 -o C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/win32_monitor.o -MF C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/win32_monitor.d -c C:/dev/Hazel/Hazel/vendor/GLFW/src/win32_monitor.c"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/GLFW",
+            "file": "C:/dev/Hazel/Hazel/vendor/GLFW/src/win32_thread.c",
+            "command": "cc -MD -MP -D_GLFW_WIN32 -D_CRT_SECURE_NO_WARNINGS -m64 -std=c17 -o C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/win32_thread.o -MF C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/win32_thread.d -c C:/dev/Hazel/Hazel/vendor/GLFW/src/win32_thread.c"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/GLFW",
+            "file": "C:/dev/Hazel/Hazel/vendor/GLFW/src/win32_time.c",
+            "command": "cc -MD -MP -D_GLFW_WIN32 -D_CRT_SECURE_NO_WARNINGS -m64 -std=c17 -o C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/win32_time.o -MF C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/win32_time.d -c C:/dev/Hazel/Hazel/vendor/GLFW/src/win32_time.c"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/GLFW",
+            "file": "C:/dev/Hazel/Hazel/vendor/GLFW/src/win32_window.c",
+            "command": "cc -MD -MP -D_GLFW_WIN32 -D_CRT_SECURE_NO_WARNINGS -m64 -std=c17 -o C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/win32_window.o -MF C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/win32_window.d -c C:/dev/Hazel/Hazel/vendor/GLFW/src/win32_window.c"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/GLFW",
+            "file": "C:/dev/Hazel/Hazel/vendor/GLFW/src/window.c",
+            "command": "cc -MD -MP -D_GLFW_WIN32 -D_CRT_SECURE_NO_WARNINGS -m64 -std=c17 -o C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/window.o -MF C:/dev/Hazel/Hazel/vendor/GLFW/build/Dist-windows-x86_64/obj/GLFW/window.d -c C:/dev/Hazel/Hazel/vendor/GLFW/src/window.c"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/Glad",
+            "file": "C:/dev/Hazel/Hazel/vendor/Glad/src/glad.c",
+            "command": "cc -MD -MP -IC:/dev/Hazel/Hazel/vendor/Glad/include -m64 -o C:/dev/Hazel/Hazel/vendor/Glad/build/Dist-windows-x86_64/obj/Glad/glad.o -MF C:/dev/Hazel/Hazel/vendor/Glad/build/Dist-windows-x86_64/obj/Glad/glad.d -c C:/dev/Hazel/Hazel/vendor/Glad/src/glad.c"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel",
+            "file": "C:/dev/Hazel/Hazel/src/Hazel/Application.cpp",
+            "command": "cc -MD -MP -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DGLFW_INCLUDE_NONE -DHZ_DIST -IC:/dev/Hazel/Hazel/src -IC:/dev/Hazel/Hazel/vendor/spdlog/include -IC:/dev/Hazel/Hazel/vendor/GLFW/include -IC:/dev/Hazel/Hazel/vendor/Glad/include -m64 -O2 -o C:/dev/Hazel/build/Dist-windows-x86_64/obj/Hazel/Application.o -MF C:/dev/Hazel/build/Dist-windows-x86_64/obj/Hazel/Application.d -c C:/dev/Hazel/Hazel/src/Hazel/Application.cpp"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel",
+            "file": "C:/dev/Hazel/Hazel/src/Hazel/Layer.cpp",
+            "command": "cc -MD -MP -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DGLFW_INCLUDE_NONE -DHZ_DIST -IC:/dev/Hazel/Hazel/src -IC:/dev/Hazel/Hazel/vendor/spdlog/include -IC:/dev/Hazel/Hazel/vendor/GLFW/include -IC:/dev/Hazel/Hazel/vendor/Glad/include -m64 -O2 -o C:/dev/Hazel/build/Dist-windows-x86_64/obj/Hazel/Layer.o -MF C:/dev/Hazel/build/Dist-windows-x86_64/obj/Hazel/Layer.d -c C:/dev/Hazel/Hazel/src/Hazel/Layer.cpp"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel",
+            "file": "C:/dev/Hazel/Hazel/src/Hazel/LayerStack.cpp",
+            "command": "cc -MD -MP -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DGLFW_INCLUDE_NONE -DHZ_DIST -IC:/dev/Hazel/Hazel/src -IC:/dev/Hazel/Hazel/vendor/spdlog/include -IC:/dev/Hazel/Hazel/vendor/GLFW/include -IC:/dev/Hazel/Hazel/vendor/Glad/include -m64 -O2 -o C:/dev/Hazel/build/Dist-windows-x86_64/obj/Hazel/LayerStack.o -MF C:/dev/Hazel/build/Dist-windows-x86_64/obj/Hazel/LayerStack.d -c C:/dev/Hazel/Hazel/src/Hazel/LayerStack.cpp"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel",
+            "file": "C:/dev/Hazel/Hazel/src/Hazel/Log.cpp",
+            "command": "cc -MD -MP -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DGLFW_INCLUDE_NONE -DHZ_DIST -IC:/dev/Hazel/Hazel/src -IC:/dev/Hazel/Hazel/vendor/spdlog/include -IC:/dev/Hazel/Hazel/vendor/GLFW/include -IC:/dev/Hazel/Hazel/vendor/Glad/include -m64 -O2 -o C:/dev/Hazel/build/Dist-windows-x86_64/obj/Hazel/Log.o -MF C:/dev/Hazel/build/Dist-windows-x86_64/obj/Hazel/Log.d -c C:/dev/Hazel/Hazel/src/Hazel/Log.cpp"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel",
+            "file": "C:/dev/Hazel/Hazel/src/Platform/Windows/WindowsWindow.cpp",
+            "command": "cc -MD -MP -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DGLFW_INCLUDE_NONE -DHZ_DIST -IC:/dev/Hazel/Hazel/src -IC:/dev/Hazel/Hazel/vendor/spdlog/include -IC:/dev/Hazel/Hazel/vendor/GLFW/include -IC:/dev/Hazel/Hazel/vendor/Glad/include -m64 -O2 -o C:/dev/Hazel/build/Dist-windows-x86_64/obj/Hazel/WindowsWindow.o -MF C:/dev/Hazel/build/Dist-windows-x86_64/obj/Hazel/WindowsWindow.d -c C:/dev/Hazel/Hazel/src/Platform/Windows/WindowsWindow.cpp"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel",
+            "file": "C:/dev/Hazel/Hazel/src/hzpch.cpp",
+            "command": "cc -MD -MP -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DGLFW_INCLUDE_NONE -DHZ_DIST -IC:/dev/Hazel/Hazel/src -IC:/dev/Hazel/Hazel/vendor/spdlog/include -IC:/dev/Hazel/Hazel/vendor/GLFW/include -IC:/dev/Hazel/Hazel/vendor/Glad/include -m64 -O2 -o C:/dev/Hazel/build/Dist-windows-x86_64/obj/Hazel/hzpch.o -MF C:/dev/Hazel/build/Dist-windows-x86_64/obj/Hazel/hzpch.d -c C:/dev/Hazel/Hazel/src/hzpch.cpp"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Sandbox",
+            "file": "C:/dev/Hazel/Sandbox/src/SandboxApp.cpp",
+            "command": "cc -MD -MP -DHZ_PLATFORM_WINDOWS -DHZ_DIST -IC:/dev/Hazel/Hazel/src -IC:/dev/Hazel/Hazel/vendor/spdlog/include -m64 -O2 -o C:/dev/Hazel/build/Dist-windows-x86_64/obj/Sandbox/SandboxApp.o -MF C:/dev/Hazel/build/Dist-windows-x86_64/obj/Sandbox/SandboxApp.d -c C:/dev/Hazel/Sandbox/src/SandboxApp.cpp"
+          }
+]
