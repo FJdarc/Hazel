@@ -8,3 +8,6 @@
 [submodule "vendor/export-compile-commands"]
 	path = vendor/export-compile-commands
 	url = https://github.com/FJdarc/premake-export-compile-commands
+[submodule "Hazel/vendor/imgui"]
+	path = Hazel/vendor/imgui
+	url = https://github.com/FJdarc/imgui
