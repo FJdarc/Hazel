@@ -132,39 +132,81 @@
           }
 ,
           {
+            "directory": "C:/dev/Hazel/Hazel/vendor/imgui",
+            "file": "C:/dev/Hazel/Hazel/vendor/imgui/imgui.cpp",
+            "command": "cc -MD -MP -m64 -o C:/dev/Hazel/Hazel/vendor/imgui/build/Debug-windows-x86_64/obj/ImGui/imgui.o -MF C:/dev/Hazel/Hazel/vendor/imgui/build/Debug-windows-x86_64/obj/ImGui/imgui.d -c C:/dev/Hazel/Hazel/vendor/imgui/imgui.cpp"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/imgui",
+            "file": "C:/dev/Hazel/Hazel/vendor/imgui/imgui_demo.cpp",
+            "command": "cc -MD -MP -m64 -o C:/dev/Hazel/Hazel/vendor/imgui/build/Debug-windows-x86_64/obj/ImGui/imgui_demo.o -MF C:/dev/Hazel/Hazel/vendor/imgui/build/Debug-windows-x86_64/obj/ImGui/imgui_demo.d -c C:/dev/Hazel/Hazel/vendor/imgui/imgui_demo.cpp"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/imgui",
+            "file": "C:/dev/Hazel/Hazel/vendor/imgui/imgui_draw.cpp",
+            "command": "cc -MD -MP -m64 -o C:/dev/Hazel/Hazel/vendor/imgui/build/Debug-windows-x86_64/obj/ImGui/imgui_draw.o -MF C:/dev/Hazel/Hazel/vendor/imgui/build/Debug-windows-x86_64/obj/ImGui/imgui_draw.d -c C:/dev/Hazel/Hazel/vendor/imgui/imgui_draw.cpp"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/imgui",
+            "file": "C:/dev/Hazel/Hazel/vendor/imgui/imgui_tables.cpp",
+            "command": "cc -MD -MP -m64 -o C:/dev/Hazel/Hazel/vendor/imgui/build/Debug-windows-x86_64/obj/ImGui/imgui_tables.o -MF C:/dev/Hazel/Hazel/vendor/imgui/build/Debug-windows-x86_64/obj/ImGui/imgui_tables.d -c C:/dev/Hazel/Hazel/vendor/imgui/imgui_tables.cpp"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel/vendor/imgui",
+            "file": "C:/dev/Hazel/Hazel/vendor/imgui/imgui_widgets.cpp",
+            "command": "cc -MD -MP -m64 -o C:/dev/Hazel/Hazel/vendor/imgui/build/Debug-windows-x86_64/obj/ImGui/imgui_widgets.o -MF C:/dev/Hazel/Hazel/vendor/imgui/build/Debug-windows-x86_64/obj/ImGui/imgui_widgets.d -c C:/dev/Hazel/Hazel/vendor/imgui/imgui_widgets.cpp"
+          }
+,
+          {
             "directory": "C:/dev/Hazel/Hazel",
             "file": "C:/dev/Hazel/Hazel/src/Hazel/Application.cpp",
-            "command": "cc -MD -MP -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DGLFW_INCLUDE_NONE -DHZ_DEBUG -IC:/dev/Hazel/Hazel/src -IC:/dev/Hazel/Hazel/vendor/spdlog/include -IC:/dev/Hazel/Hazel/vendor/GLFW/include -IC:/dev/Hazel/Hazel/vendor/Glad/include -m64 -g -g -o C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/Application.o -MF C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/Application.d -c C:/dev/Hazel/Hazel/src/Hazel/Application.cpp"
+            "command": "cc -MD -MP -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DGLFW_INCLUDE_NONE -DHZ_DEBUG -IC:/dev/Hazel/Hazel/src -IC:/dev/Hazel/Hazel/vendor/spdlog/include -IC:/dev/Hazel/Hazel/vendor/GLFW/include -IC:/dev/Hazel/Hazel/vendor/Glad/include -IC:/dev/Hazel/Hazel/vendor/imgui -m64 -g -g -o C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/Application.o -MF C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/Application.d -c C:/dev/Hazel/Hazel/src/Hazel/Application.cpp"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel",
+            "file": "C:/dev/Hazel/Hazel/src/Hazel/ImGui/ImGuiLayer.cpp",
+            "command": "cc -MD -MP -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DGLFW_INCLUDE_NONE -DHZ_DEBUG -IC:/dev/Hazel/Hazel/src -IC:/dev/Hazel/Hazel/vendor/spdlog/include -IC:/dev/Hazel/Hazel/vendor/GLFW/include -IC:/dev/Hazel/Hazel/vendor/Glad/include -IC:/dev/Hazel/Hazel/vendor/imgui -m64 -g -g -o C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/ImGuiLayer.o -MF C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/ImGuiLayer.d -c C:/dev/Hazel/Hazel/src/Hazel/ImGui/ImGuiLayer.cpp"
           }
 ,
           {
             "directory": "C:/dev/Hazel/Hazel",
             "file": "C:/dev/Hazel/Hazel/src/Hazel/Layer.cpp",
-            "command": "cc -MD -MP -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DGLFW_INCLUDE_NONE -DHZ_DEBUG -IC:/dev/Hazel/Hazel/src -IC:/dev/Hazel/Hazel/vendor/spdlog/include -IC:/dev/Hazel/Hazel/vendor/GLFW/include -IC:/dev/Hazel/Hazel/vendor/Glad/include -m64 -g -g -o C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/Layer.o -MF C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/Layer.d -c C:/dev/Hazel/Hazel/src/Hazel/Layer.cpp"
+            "command": "cc -MD -MP -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DGLFW_INCLUDE_NONE -DHZ_DEBUG -IC:/dev/Hazel/Hazel/src -IC:/dev/Hazel/Hazel/vendor/spdlog/include -IC:/dev/Hazel/Hazel/vendor/GLFW/include -IC:/dev/Hazel/Hazel/vendor/Glad/include -IC:/dev/Hazel/Hazel/vendor/imgui -m64 -g -g -o C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/Layer.o -MF C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/Layer.d -c C:/dev/Hazel/Hazel/src/Hazel/Layer.cpp"
           }
 ,
           {
             "directory": "C:/dev/Hazel/Hazel",
             "file": "C:/dev/Hazel/Hazel/src/Hazel/LayerStack.cpp",
-            "command": "cc -MD -MP -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DGLFW_INCLUDE_NONE -DHZ_DEBUG -IC:/dev/Hazel/Hazel/src -IC:/dev/Hazel/Hazel/vendor/spdlog/include -IC:/dev/Hazel/Hazel/vendor/GLFW/include -IC:/dev/Hazel/Hazel/vendor/Glad/include -m64 -g -g -o C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/LayerStack.o -MF C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/LayerStack.d -c C:/dev/Hazel/Hazel/src/Hazel/LayerStack.cpp"
+            "command": "cc -MD -MP -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DGLFW_INCLUDE_NONE -DHZ_DEBUG -IC:/dev/Hazel/Hazel/src -IC:/dev/Hazel/Hazel/vendor/spdlog/include -IC:/dev/Hazel/Hazel/vendor/GLFW/include -IC:/dev/Hazel/Hazel/vendor/Glad/include -IC:/dev/Hazel/Hazel/vendor/imgui -m64 -g -g -o C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/LayerStack.o -MF C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/LayerStack.d -c C:/dev/Hazel/Hazel/src/Hazel/LayerStack.cpp"
           }
 ,
           {
             "directory": "C:/dev/Hazel/Hazel",
             "file": "C:/dev/Hazel/Hazel/src/Hazel/Log.cpp",
-            "command": "cc -MD -MP -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DGLFW_INCLUDE_NONE -DHZ_DEBUG -IC:/dev/Hazel/Hazel/src -IC:/dev/Hazel/Hazel/vendor/spdlog/include -IC:/dev/Hazel/Hazel/vendor/GLFW/include -IC:/dev/Hazel/Hazel/vendor/Glad/include -m64 -g -g -o C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/Log.o -MF C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/Log.d -c C:/dev/Hazel/Hazel/src/Hazel/Log.cpp"
+            "command": "cc -MD -MP -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DGLFW_INCLUDE_NONE -DHZ_DEBUG -IC:/dev/Hazel/Hazel/src -IC:/dev/Hazel/Hazel/vendor/spdlog/include -IC:/dev/Hazel/Hazel/vendor/GLFW/include -IC:/dev/Hazel/Hazel/vendor/Glad/include -IC:/dev/Hazel/Hazel/vendor/imgui -m64 -g -g -o C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/Log.o -MF C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/Log.d -c C:/dev/Hazel/Hazel/src/Hazel/Log.cpp"
+          }
+,
+          {
+            "directory": "C:/dev/Hazel/Hazel",
+            "file": "C:/dev/Hazel/Hazel/src/Platform/OpenGL/ImGuiOpenGLRenderer.cpp",
+            "command": "cc -MD -MP -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DGLFW_INCLUDE_NONE -DHZ_DEBUG -IC:/dev/Hazel/Hazel/src -IC:/dev/Hazel/Hazel/vendor/spdlog/include -IC:/dev/Hazel/Hazel/vendor/GLFW/include -IC:/dev/Hazel/Hazel/vendor/Glad/include -IC:/dev/Hazel/Hazel/vendor/imgui -m64 -g -g -o C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/ImGuiOpenGLRenderer.o -MF C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/ImGuiOpenGLRenderer.d -c C:/dev/Hazel/Hazel/src/Platform/OpenGL/ImGuiOpenGLRenderer.cpp"
           }
 ,
           {
             "directory": "C:/dev/Hazel/Hazel",
             "file": "C:/dev/Hazel/Hazel/src/Platform/Windows/WindowsWindow.cpp",
-            "command": "cc -MD -MP -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DGLFW_INCLUDE_NONE -DHZ_DEBUG -IC:/dev/Hazel/Hazel/src -IC:/dev/Hazel/Hazel/vendor/spdlog/include -IC:/dev/Hazel/Hazel/vendor/GLFW/include -IC:/dev/Hazel/Hazel/vendor/Glad/include -m64 -g -g -o C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/WindowsWindow.o -MF C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/WindowsWindow.d -c C:/dev/Hazel/Hazel/src/Platform/Windows/WindowsWindow.cpp"
+            "command": "cc -MD -MP -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DGLFW_INCLUDE_NONE -DHZ_DEBUG -IC:/dev/Hazel/Hazel/src -IC:/dev/Hazel/Hazel/vendor/spdlog/include -IC:/dev/Hazel/Hazel/vendor/GLFW/include -IC:/dev/Hazel/Hazel/vendor/Glad/include -IC:/dev/Hazel/Hazel/vendor/imgui -m64 -g -g -o C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/WindowsWindow.o -MF C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/WindowsWindow.d -c C:/dev/Hazel/Hazel/src/Platform/Windows/WindowsWindow.cpp"
           }
 ,
           {
             "directory": "C:/dev/Hazel/Hazel",
             "file": "C:/dev/Hazel/Hazel/src/hzpch.cpp",
-            "command": "cc -MD -MP -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DGLFW_INCLUDE_NONE -DHZ_DEBUG -IC:/dev/Hazel/Hazel/src -IC:/dev/Hazel/Hazel/vendor/spdlog/include -IC:/dev/Hazel/Hazel/vendor/GLFW/include -IC:/dev/Hazel/Hazel/vendor/Glad/include -m64 -g -g -o C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/hzpch.o -MF C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/hzpch.d -c C:/dev/Hazel/Hazel/src/hzpch.cpp"
+            "command": "cc -MD -MP -DHZ_PLATFORM_WINDOWS -DHZ_BUILD_DLL -DGLFW_INCLUDE_NONE -DHZ_DEBUG -IC:/dev/Hazel/Hazel/src -IC:/dev/Hazel/Hazel/vendor/spdlog/include -IC:/dev/Hazel/Hazel/vendor/GLFW/include -IC:/dev/Hazel/Hazel/vendor/Glad/include -IC:/dev/Hazel/Hazel/vendor/imgui -m64 -g -g -o C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/hzpch.o -MF C:/dev/Hazel/build/Debug-windows-x86_64/obj/Hazel/hzpch.d -c C:/dev/Hazel/Hazel/src/hzpch.cpp"
           }
 ,
           {

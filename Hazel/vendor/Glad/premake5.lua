@@ -20,5 +20,5 @@ project "Glad"
         systemversion "latest"
         staticruntime "On"
 
-        filter { "system:windows", "configurations:Release" }
-            buildoptions { "-static" }
+    filter { "system:windows", "configurations:Release" }
+        buildoptions { "-static" }
