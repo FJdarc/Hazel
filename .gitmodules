@@ -1,0 +1,9 @@
+[submodule "Hazel/vendor/GLFW"]
+	path = Hazel/vendor/GLFW
+	url = https://github.com/FJdarc/glfw
+[submodule "Hazel/vendor/imgui"]
+	path = Hazel/vendor/imgui
+	url = https://github.com/FJdarc/imgui
+[submodule "Hazel/vendor/spdlog"]
+	path = Hazel/vendor/spdlog
+	url = https://github.com/FJdarc/spdlog
