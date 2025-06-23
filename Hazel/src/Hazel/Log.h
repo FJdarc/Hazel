@@ -5,23 +5,28 @@
 #include "spdlog/fmt/ostr.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
 
-namespace Hazel {
-class HAZEL_API Log {
- public:
-  static void Init();
+namespace Hazel
+{
+    class HAZEL_API Log
+    {
+    public:
+        static void Init();
 
-  inline static std::shared_ptr<spdlog::logger>& GetCoreLogger() {
-    return s_CoreLogger;
-  }
-  inline static std::shared_ptr<spdlog::logger>& GetClientLogger() {
-    return s_ClientLogger;
-  }
+        inline static std::shared_ptr<spdlog::logger>& GetCoreLogger()
+        {
+            return s_CoreLogger;
+        }
 
- private:
-  static std::shared_ptr<spdlog::logger> s_CoreLogger;
-  static std::shared_ptr<spdlog::logger> s_ClientLogger;
-};
-}  // namespace Hazel
+        inline static std::shared_ptr<spdlog::logger>& GetClientLogger()
+        {
+            return s_ClientLogger;
+        }
+
+    private:
+        static std::shared_ptr<spdlog::logger> s_CoreLogger;
+        static std::shared_ptr<spdlog::logger> s_ClientLogger;
+    };
+} // namespace Hazel
 
 #define HZ_CORE_TRACE(...)    ::Hazel::Log::GetCoreLogger()->trace(__VA_ARGS__)
 #define HZ_CORE_INFO(...)     ::Hazel::Log::GetCoreLogger()->info(__VA_ARGS__)

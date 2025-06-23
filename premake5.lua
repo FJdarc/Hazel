@@ -1,14 +1,13 @@
 workspace "Hazel"
     architecture "x64"
-
     configurations
     {
         "Debug",
         "Release",
         "Dist"
     }
-    toolset "gcc"
 
+buildoptions "/utf-8"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
@@ -68,15 +67,17 @@ project "Hazel"
 
     filter "configurations:Debug"
         defines "HZ_DEBUG"
-        buildoptions "-g"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "HZ_RELEASE"
+        buildoptions "/MD"
         optimize "On"
         
     filter "configurations:DIST"
         defines "HZ_DIST"
+        buildoptions "/MD"
         optimize "On"
 
 project "Sandbox"
@@ -117,13 +118,15 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "HZ_DEBUG"
-        buildoptions "-g"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "HZ_RELEASE"
+        buildoptions "/MD"
         optimize "On"
-
+        
     filter "configurations:DIST"
         defines "HZ_DIST"
+        buildoptions "/MD"
         optimize "On"
