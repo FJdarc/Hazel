@@ -1,0 +1,40 @@
+{
+    "makefile.configurations": [
+        {
+            "name": "Debug",
+            "makeArgs": [
+                "config=debug"
+            ]
+        },
+        {
+            "name": "Release",
+            "makeArgs": [
+                "config=release"
+            ]
+        },
+        {
+            "name": "Dist",
+            "makeArgs": [
+                "config=dist"
+            ]
+        }
+    ],
+    "makefile.makePath": "mingw32-make",
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "${workspaceFolder}/build/Debug-windows-x86_64/bin",
+            "binaryPath": "${workspaceFolder}/build/Debug-windows-x86_64/bin/Sandbox.exe",
+            "binaryArgs": []
+        },
+        {
+            "cwd": "${workspaceFolder}/build/Release-windows-x86_64/bin",
+            "binaryPath": "${workspaceFolder}/build/Release-windows-x86_64/bin/Sandbox.exe",
+            "binaryArgs": []
+        },
+        {
+            "cwd": "${workspaceFolder}/build/Dist-windows-x86_64/bin",
+            "binaryPath": "${workspaceFolder}/build/Dist-windows-x86_64/bin/Sandbox.exe",
+            "binaryArgs": []
+        }
+    ]
+}
