@@ -36,5 +36,19 @@
             "binaryPath": "${workspaceFolder}/build/Dist-windows-x86_64/bin/Sandbox.exe",
             "binaryArgs": []
         }
+    ],
+    "C_Cpp.default.defines": [
+        "HZ_PLATFORM_WINDOWS",
+        "HZ_BUILD_DLL",
+        "GLFW_INCLUDE_NONE"
+    ],
+    "C_Cpp.default.includePath": [
+        "Hazel/src",
+        "Sandbox/src",
+        "Hazel/vendor/spdlog/include",
+        "Hazel/vendor/GLFW/include",
+        "Hazel/vendor/Glad/include",
+        "Hazel/vendor/imgui",
+        "Hazel/vendor/glm"
     ]
 }
