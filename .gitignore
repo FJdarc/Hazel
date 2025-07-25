@@ -1,0 +1,5 @@
+﻿build/
+.idea/
+*.vcxproj
+*.vcxproj.filters
+*.sln
