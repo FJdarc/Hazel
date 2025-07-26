@@ -11,6 +11,11 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 staticruntime "off"
 buildoptions "/utf-8"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Hazel/vendor/GLFW/include"
+
+include "Hazel/vendor/GLFW"
+
 project "Hazel"
     location "Hazel"
     kind "SharedLib"
@@ -31,11 +36,13 @@ project "Hazel"
     includedirs
     {
         "%{prj.name}/src",
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/vendor/spdlog/include",
+        "%{IncludeDir.GLFW}"
     }
 
     links
     {
+        "GLFW",
         "opengl32",
         "gdi32"
     }
