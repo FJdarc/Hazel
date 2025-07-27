@@ -76,14 +76,9 @@ namespace Hazel {
 	private:
 		Event& m_Event;
 	};
-
-	inline std::ostream& operator<<(std::ostream& os, const Event& e)
-	{
-		return os << e.ToString();
-	}
 }
 
-// 为Hazel::Event的子类提供通用的fmt格式化支持
+// 为Hazel::Event的所有子类提供通用的fmt格式化支持
 template <typename T>
 struct fmt::formatter<T, std::enable_if_t<std::is_base_of_v<Hazel::Event, T>, char>> : fmt::formatter<std::string>
 {
