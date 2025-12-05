@@ -1,7 +1,7 @@
 project "Glad"
     kind "StaticLib"
     language "C"
-    staticruntime "off"
+    staticruntime "on"
     
     targetdir ("build/" .. outputdir .. "/bin")
     objdir ("build/" .. outputdir .. "/obj/%{prj.name}")
@@ -10,12 +10,12 @@ project "Glad"
     {
         "include/glad/glad.h",
         "include/KHR/khrplatform.h",
-        "src/glad.c"
+        "src/glad.c",
     }
 
     includedirs
     {
-        "include"
+        "include",
     }
     
     filter "system:windows"
