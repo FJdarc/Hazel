@@ -4,7 +4,6 @@
 #include "Hazel/KeyCodes.h"
 
 namespace Hazel {
-
 	class KeyEvent : public Event
 	{
 	public:
@@ -13,7 +12,8 @@ namespace Hazel {
 		EVENT_CLASS_CATEGORY(EventCategoryKeyboard | EventCategoryInput)
 	protected:
 		KeyEvent(const KeyCode keycode)
-			: m_KeyCode(keycode) {}
+			: m_KeyCode(keycode) {
+		}
 
 		KeyCode m_KeyCode;
 	};
@@ -22,7 +22,8 @@ namespace Hazel {
 	{
 	public:
 		KeyPressedEvent(const KeyCode keycode, bool isRepeat = false)
-			: KeyEvent(keycode), m_IsRepeat(isRepeat) {}
+			: KeyEvent(keycode), m_IsRepeat(isRepeat) {
+		}
 
 		bool IsRepeat() const { return m_IsRepeat; }
 
@@ -42,7 +43,8 @@ namespace Hazel {
 	{
 	public:
 		KeyReleasedEvent(const KeyCode keycode)
-			: KeyEvent(keycode) {}
+			: KeyEvent(keycode) {
+		}
 
 		std::string ToString() const override
 		{
@@ -58,7 +60,8 @@ namespace Hazel {
 	{
 	public:
 		KeyTypedEvent(const KeyCode keycode)
-			: KeyEvent(keycode) {}
+			: KeyEvent(keycode) {
+		}
 
 		std::string ToString() const override
 		{

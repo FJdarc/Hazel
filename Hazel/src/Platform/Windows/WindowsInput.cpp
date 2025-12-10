@@ -1,8 +1,8 @@
 #include "hzpch.h"
 #include "WindowsInput.h"
 
-#include <GLFW/glfw3.h>
 #include "Hazel/Application.h"
+#include <GLFW/glfw3.h>
 
 namespace Hazel {
 	Input* Input::s_Instance = new WindowsInput();
@@ -41,5 +41,4 @@ namespace Hazel {
 		auto [x, y] = GetMousePositionImpl();
 		return y;
 	}
-
 }

@@ -2,11 +2,10 @@
 
 #include "Hazel/Core.h"
 
-#include "Hazel/Window.h"
 #include "Hazel/LayerStack.h"
+#include "Hazel/Window.h"
 #include "Hazel/Events/Event.h"
 #include "Hazel/Events/ApplicationEvent.h"
-
 #include "Hazel/ImGui/ImGuiLayer.h"
 
 namespace Hazel
@@ -33,6 +32,8 @@ namespace Hazel
 		ImGuiLayer* m_ImGuiLayer;
         bool m_Running = true;
         LayerStack m_LayerStack;
+
+		unsigned int m_VertexArray, m_VertexBuffer, m_IndexBuffer;
 	private:
 		static Application* s_Instance;
     };

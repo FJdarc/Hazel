@@ -7,7 +7,6 @@
 #include "Hazel/Application.h"
 
 #include <GLFW/glfw3.h>
-//#include <glad/glad.h>
 
 namespace Hazel
 {
@@ -15,9 +14,11 @@ namespace Hazel
 		: Layer("ImGuiLayer")
 	{
 	}
+
 	ImGuiLayer::~ImGuiLayer()
 	{
 	}
+
 	void ImGuiLayer::OnAttach()
 	{
 		// Setup Dear ImGui context
@@ -53,29 +54,33 @@ namespace Hazel
 #endif
 		ImGui_ImplOpenGL3_Init("#version 410");
 	}
+
 	void ImGuiLayer::OnDetach()
 	{
 		ImGui_ImplOpenGL3_Shutdown();
 		ImGui_ImplGlfw_Shutdown();
 		ImGui::DestroyContext();
 	}
+
 	void ImGuiLayer::OnImGuiRender()
 	{
 		static bool show = true;
 		ImGui::ShowDemoWindow(&show);
 	}
+
 	void ImGuiLayer::Begin()
 	{
 		ImGui_ImplOpenGL3_NewFrame();
 		ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
 	}
+
 	void ImGuiLayer::End()
 	{
 		ImGuiIO& io = ImGui::GetIO();
 		Application& app = Application::Get();
 		io.DisplaySize = ImVec2((float)app.GetWindow().GetWidth(), (float)app.GetWindow().GetHeight());
-		
+
 		// Rendering
 		ImGui::Render();
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
