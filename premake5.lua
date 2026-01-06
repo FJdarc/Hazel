@@ -11,6 +11,12 @@ workspace "Hazel"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder
+IncludeDir = {}
+IncludeDir["GLFW"] = "Hazel/vendor/GLFW/include"
+
+include "Hazel/vendor/GLFW"
+
 project "Hazel"
     location "Hazel"
     kind "StaticLib"
@@ -30,22 +36,22 @@ project "Hazel"
         "%{prj.name}/src/**.cpp"
     }
 
-    defines
-    {
-    }
-
     includedirs
     {
         "%{prj.name}/src",
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/vendor/spdlog/include",
+        "%{IncludeDir.GLFW}"
     }
 
     links
     {
+        "GLFW",
+        "opengl32"
     }
 
     dependson
     {
+        "GLFW"
     }
 
     filter "action:vs*"
@@ -58,7 +64,7 @@ project "Hazel"
         {
             "HZ_PLATFORM_WINDOWS"
         }
-
+        
     filter "configurations:Debug"
         defines "HZ_DEBUG"
         optimize "Debug"
@@ -91,10 +97,6 @@ project "Sandbox"
     {
         "Sandbox/src/**.h",
         "Sandbox/src/**.cpp"
-    }
-
-    defines
-    {
     }
 
     includedirs
