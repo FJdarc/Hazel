@@ -33,7 +33,8 @@ project "Hazel"
 
     includedirs
     {
-        "%{prj.name}/src"
+        "%{prj.name}/src",
+        "%{prj.name}/vendor/spdlog/include"
     }
 
     links
@@ -46,6 +47,7 @@ project "Hazel"
 
     filter "system:windows"
         systemversion "latest"
+        buildoptions "/utf-8"
 
         defines
         {
@@ -92,7 +94,8 @@ project "Sandbox"
 
     includedirs
     {
-        "Hazel/src"
+        "Hazel/src",
+        "Hazel/vendor/spdlog/include"
     }
 
     links
@@ -107,6 +110,7 @@ project "Sandbox"
 
     filter "system:windows"
         systemversion "latest"
+        buildoptions "/utf-8"
 
         defines
         {
