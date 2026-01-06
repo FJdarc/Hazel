@@ -1,6 +1,6 @@
 #include "Hazel/Application.h"
 
-#include "spdlog/spdlog.h"
+#include "Hazel/Log.h"
 
 namespace Hazel {
     Application::Application() {
@@ -12,8 +12,8 @@ namespace Hazel {
     }
 
     void Application::Run() {
-        if (spdlog::default_logger())
-            spdlog::info("spdlog ready!");
+        HZ_CORE_INFO("Core logger ready!");
+        HZ_INFO("Client logger ready!");
 
         while (true) {
 
