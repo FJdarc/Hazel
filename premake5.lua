@@ -48,9 +48,11 @@ project "Hazel"
     {
     }
 
+    filter "action:vs*"
+        buildoptions "/utf-8"
+
     filter "system:windows"
         systemversion "latest"
-        buildoptions "/utf-8"
 
         defines
         {
@@ -111,9 +113,11 @@ project "Sandbox"
         "Hazel"
     }
 
+    filter "action:vs*"
+        buildoptions "/utf-8"
+
     filter "system:windows"
         systemversion "latest"
-        buildoptions "/utf-8"
 
         defines
         {
