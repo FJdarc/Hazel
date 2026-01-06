@@ -3,6 +3,8 @@
 #include "Hazel/Core.h"
 #include "spdlog/fmt/fmt.h"
 
+#include <sstream>
+
 namespace Hazel {
 
 	// Events in Hazel are currently blocking, meaning when an event occurs it
