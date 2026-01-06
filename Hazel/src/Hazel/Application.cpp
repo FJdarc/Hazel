@@ -1,6 +1,8 @@
 #include "hzpch.h"
 #include "Hazel/Application.h"
 
+#include "Hazel/Events/ApplicationEvent.h"
+
 namespace Hazel {
     Application::Application() {
 
@@ -11,8 +13,8 @@ namespace Hazel {
     }
 
     void Application::Run() {
-        HZ_CORE_INFO("Core logger ready!");
-        HZ_INFO("Client logger ready!");
+        WindowResizeEvent e(1280, 720);
+        HZ_CORE_TRACE(e);
 
         while (true) {
 
