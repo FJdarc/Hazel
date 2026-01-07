@@ -1,7 +1,7 @@
 #include "hzpch.h"
 #include "Hazel/Application.h"
 
-#include <GLFW/glfw3.h>
+#include <Glad/glad.h>
 
 namespace Hazel {
     Application::Application() {
