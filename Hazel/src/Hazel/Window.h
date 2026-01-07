@@ -7,8 +7,7 @@
 
 namespace Hazel {
 
-	struct WindowProps
-	{
+	struct WindowProps {
 		std::string Title;
 		uint32_t Width;
 		uint32_t Height;
